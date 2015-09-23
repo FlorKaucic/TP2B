@@ -6,11 +6,13 @@ Antes de entregar borramos esto.
 Recuerden que pueden usar TDD tambien para ir desarrollando todo. Como prefieran.
 
 Otra cosa que aclaro aca: 
-Traten de hacer todo static, y en lo posible en un metodo (a menos que
-quieran hacer una funcion intercambiar), asi despues podemos meter todo en la misma
+Traten de hacer todo static, asi despues podemos meter todo en la misma
 clase e implementarlo de esta manera:
 Ordenar.ordenarPorFusion(vector);
 Ordenar.ordenarPorBurbujeo(vector); 
 etc...
 
 Por ahora usemos clases separadas para no joder con los commits y merges.
+
+
+Otra aclaracion: hice todas las clases void y sin parametros, tienen que cambiar eso xD
