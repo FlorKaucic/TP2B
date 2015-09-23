@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 import auxiliar.Complejo;
@@ -17,13 +19,13 @@ public class Main {
 		// CAMBIAR ESTE VALOR
 		int cant = 100000;
 		
-		long tIni, tFin;
+		Date tIni, tFin;
 				
 		Complejo [] c = new Complejo[cant];
 		
 		// Pueden ir comentando de a partes para evaluar un solo caso
 		// Y comentar/descomentar los prints
-			
+		
 		
 		// Nuevo caso
 		
@@ -32,7 +34,8 @@ public class Main {
 			c[i]=new Complejo(i, i);
 //			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
-		tIni = System.nanoTime();
+		tIni = Calendar.getInstance().getTime();
+		
 		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
@@ -40,8 +43,10 @@ public class Main {
 //		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);
-		tFin = System.nanoTime();
-		System.out.println("\n\nTiempo de resolucion: " + ((tFin - tIni)/1000000));
+		
+		
+		tFin = Calendar.getInstance().getTime();
+		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
 //		System.out.println("\nOrdenados:");
 //		for (int i = 0; i < c.length; i++)
 //			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
@@ -55,7 +60,7 @@ public class Main {
 			c[i]=new Complejo(cant-i, cant-i);
 //			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
-		tIni = System.nanoTime();
+		tIni = Calendar.getInstance().getTime();
 		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
@@ -63,8 +68,8 @@ public class Main {
 //		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);
-		tFin = System.nanoTime();
-		System.out.println("\n\nTiempo de resolucion: " + ((tFin - tIni)/1000000));
+		tFin = Calendar.getInstance().getTime();
+		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
 //		System.out.println("\nOrdenados:");
 //		for (int i = 0; i < c.length; i++)
 //			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
@@ -80,7 +85,7 @@ public class Main {
 			c[i]=new Complejo(randomDouble.nextDouble() * 20 - 10, randomDouble.nextDouble() * 20 - 100);
 //			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
-		tIni = System.nanoTime();
+		tIni = Calendar.getInstance().getTime();
 		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
@@ -88,8 +93,8 @@ public class Main {
 //		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);
-		tFin = System.nanoTime();
-		System.out.println("\n\nTiempo de resolucion: " + ((tFin - tIni)/1000000));
+		tFin = Calendar.getInstance().getTime();
+		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
 //		System.out.println("\nOrdenados:");
 //		for (int i = 0; i < c.length; i++)
 //			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
