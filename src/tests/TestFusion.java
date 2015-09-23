@@ -10,7 +10,7 @@ public class TestFusion {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub}				
 		Integer[] enteros = { 3, 1, 4, 2, 8, 0, 5, 7, 6, 9, 5, 3};
-		enteros = Fusion.ordenarPorFusion(enteros);
+		Fusion.ordenarPorFusion(enteros);
 		for (int i = 0; i < enteros.length; i++)
 			System.out.println(i + ": " + enteros[i]);	
 		
@@ -25,7 +25,7 @@ public class TestFusion {
 			c[i]=new Complejo(randomDouble.nextDouble() * 20 - 10, randomDouble.nextDouble() * 20 - 10);
 			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
-		c = Fusion.ordenarPorFusion(c);
+		Fusion.ordenarPorFusion(c);
 		System.out.println("Ordenados");
 		for (int i = 0; i < c.length; i++)
 			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
@@ -37,7 +37,7 @@ public class TestFusion {
 			c[i]=new Complejo(i, i);
 			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
-		c = Fusion.ordenarPorFusion(c);
+		Fusion.ordenarPorFusion(c);
 		System.out.println("Ordenados");
 		for (int i = 0; i < c.length; i++)
 			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
@@ -49,7 +49,7 @@ public class TestFusion {
 			c[i]=new Complejo(cant-i, cant-i);
 			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
-		c = Fusion.ordenarPorFusion(c);
+		Fusion.ordenarPorFusion(c);
 		System.out.println("Ordenados");
 		for (int i = 0; i < c.length; i++)
 			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	

@@ -1,43 +1,51 @@
 package metodos;
 
 public class Fusion {
-	public static <T extends Comparable<T>> T[] ordenarPorFusion(T[] vec) {
-		return fusion(vec, 0, vec.length, 0);
+	public static <T extends Comparable<T>> void ordenarPorFusion(T[] vec) {
+		fusion(vec, 0, vec.length);
 	}
 
-	private static <T extends Comparable<T>> T[] fusion(T[] vec, int ini, int fin, int p) {
+	private static <T extends Comparable<T>> void fusion(T[] vec, int ini, int fin) {
 		int dim = fin - ini;
+		// Si la dimension es menor o igual a 1 salgo de la funcion
+		if (dim <= 1)
+			return;
 		
-		if (dim > 1) {
-			int mitad = ini + (dim / 2);
+		// Sino
+				
+		int mitad = ini + (dim / 2);
+		
+		// Uso recursividad para evaluar la primera y segunda mitad por separado
+		fusion(vec, ini, mitad);
+		fusion(vec, mitad, fin);
 
-			fusion(vec, ini, mitad, p + 1);
-			fusion(vec, mitad, fin, p + 1);
+		// Creo un vector auxiliar para acomodar ahi las dos mitades ordenadas por separado
+		@SuppressWarnings("unchecked")
+		T[] aux = (T[]) (new Comparable[dim]);
 
-			@SuppressWarnings("unchecked")
-			T[] aux = (T[]) (new Comparable[dim]);
-			
-			for (int a = 0; a < (mitad - ini); a++)
-				aux[a] = vec[a + ini];
+		// Relleno el vector auxiliar
+		for (int a = 0; a < (mitad - ini); a++)
+			aux[a] = vec[a + ini];
+		// La parte derecha se pone en orden inverso
+		for (int b = 0; b < (fin - mitad); b++)
+			aux[b + dim / 2] = vec[fin - (b + 1)];
 
-			for (int b = 0; b < (fin - mitad); b++)
-				aux[b+dim/2] = vec[fin - (b + 1)];
+		// Variables para recorrer el auxiliar y el vector original
+		int i = 0, j = aux.length - 1, k = ini;
 
-			int i = 0, j = aux.length-1, k = ini;
-
-			while (i < j) {
-				if (aux[i].compareTo(aux[j]) < 0) {
-					vec[k] = aux[i];
-					i++;
-				} else {
-					vec[k] = aux[j];
-					j--;
-				}
-				k++;
+		// Comparo y ordeno las dos mitades ubicadas en el vector auxiliar
+		// A medida que las voy ubicando en el vector original
+		while (i < j) {
+			if (aux[i].compareTo(aux[j]) < 0) {
+				vec[k] = aux[i];
+				i++;
+			} else {
+				vec[k] = aux[j];
+				j--;
 			}
-			vec[k] = aux[i];
+			k++;
 		}
-
-		return vec;
+		// Cuando i = j tengo que ubicar el ultimo elemento en el vector original
+		vec[k] = aux[i];
 	}
 }
