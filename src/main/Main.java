@@ -17,7 +17,7 @@ public class Main {
 		// y comentar todos los sorts que no sean el que testean
 		
 		// CAMBIAR ESTE VALOR
-		int cant = 100000;
+		int cant = 5;
 		
 		Date tIni, tFin;
 				
@@ -34,17 +34,15 @@ public class Main {
 			c[i]=new Complejo(i, i);
 //			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
-		tIni = Calendar.getInstance().getTime();
 		
+		tIni = Calendar.getInstance().getTime();
 		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
 //		Insercion.ordenarPorInsercionConCentinela(c);
 //		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
-//		Burbujeo.ordenarPorBurbujeo(c);
-		
-		
+//		Burbujeo.ordenarPorBurbujeo(c);		
 		tFin = Calendar.getInstance().getTime();
 		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
 //		System.out.println("\nOrdenados:");
