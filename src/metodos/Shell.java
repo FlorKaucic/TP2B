@@ -4,7 +4,10 @@ public class Shell {
 	public static  < O extends Comparable<O> > void ordenarPorShell(O [] matriz) {
 		int salto, i, f;
 		O aux;
-		for (salto = matriz.length / 2; salto != 0; salto /= 2) {
+		
+		salto = matriz.length / 2;
+		
+		while(salto != 0) {
 			f = 1;
 			while (f == 1) { // Mientras se intercambie algún elemento
 				f = 0;
@@ -16,6 +19,7 @@ public class Shell {
 						f = 1; // y se marca como cambio.
 					}
 			}
+			salto /= 2;
 		}
 	}
 }
