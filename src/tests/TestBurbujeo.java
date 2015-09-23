@@ -1,14 +1,15 @@
 package tests;
-import metodos.Shell;
 
 import java.util.Random;
 
 import auxiliar.Complejo;
+import metodos.Burbujeo;
 
-public class TestShell {
+public class TestBurbujeo {
 
 	public static void main(String[] args) {
-		int cant = 1000;
+
+		int cant = 5;
 		//Integer [] v = new Integer[6];
 		Complejo [] c = new Complejo[cant];
 		Random randomDouble = new Random();
@@ -27,7 +28,7 @@ public class TestShell {
 		}
 		long tIni = System.currentTimeMillis();
 		
-		Shell.ordenarPorShell(c);
+		Burbujeo.ordenarPorBurbujeo(c);
 		
 		long tFin = System.currentTimeMillis();
 		
@@ -36,5 +37,5 @@ public class TestShell {
 			System.out.println(com);
 		System.out.println("Tiempo de resolucion para el vector: " + (tFin - tIni));
 	}
-
+		
 }
