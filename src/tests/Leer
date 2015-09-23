@@ -14,3 +14,6 @@ Ordenar.ordenarPorBurbujeo(vector);
 etc...
 
 Por ahora usemos clases separadas para no joder con los commits y merges.
+
+
+Otra aclaracion: hice todas las clases void y sin parametros, tienen que cambiar eso xD
