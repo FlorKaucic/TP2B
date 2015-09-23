@@ -50,19 +50,21 @@ public class VectorMath implements Comparable<VectorMath> {
 	@Override
 	public String toString() {
 		StringBuffer cadena = new StringBuffer();
+		cadena.append("\n");
 		for (int i = 0; i < this.dim; i++) {
-			cadena.append("\n" + this.vec[i]);
+			cadena.append(this.vec[i]+"\t");
 		}
+		cadena.append("\nNorma: "+this.normaDos());
 		return cadena.toString();
 	}
 
 	@Override
 	public int compareTo(VectorMath o) {
-		if(this.normaDos() > o.normaDos())
+		if (this.normaDos() > o.normaDos())
 			return 1;
-		if(this.normaDos() < o.normaDos())
+		if (this.normaDos() < o.normaDos())
 			return -1;
 		return 0;
 	}
-	
+
 }
