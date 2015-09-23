@@ -1,9 +1,9 @@
 package metodos;
 
 public class Shell {
-	public static  < Object extends Comparable<Object> > void ordenarPorShell(Object [] matriz) {
+	public static  < O extends Comparable<O> > void ordenarPorShell(O [] matriz) {
 		int salto, i, f;
-		Object aux;
+		O aux;
 		for (salto = matriz.length / 2; salto != 0; salto /= 2) {
 			f = 1;
 			while (f == 1) { // Mientras se intercambie algún elemento
