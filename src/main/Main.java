@@ -17,7 +17,7 @@ public class Main {
 		// y comentar todos los sorts que no sean el que testean
 		
 		// CAMBIAR ESTE VALOR
-		int cant = 1000;
+		int cant = 10;
 		
 		Date tIni, tFin;
 				
@@ -80,22 +80,22 @@ public class Main {
 		
 		System.out.println("\n\n\nComplejos random:");
 		for (int i = 0; i < cant; i++){
-			c[i]=new Complejo(randomDouble.nextDouble() * 20 - 10, randomDouble.nextDouble() * 20 - 100);
+			c[i]=new Complejo(randomDouble.nextDouble() * 20 - 10, randomDouble.nextDouble() * 20 - 10);
 //			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
 		tIni = Calendar.getInstance().getTime();
-		Fusion.ordenarPorFusion(c);
+//		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
 //		Insercion.ordenarPorInsercionConCentinela(c);
 //		Insercion.ordenarPorInsercionSinCentinela(c);
-//		Seleccion.ordenarPorSeleccion(c);
+		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);
 		tFin = Calendar.getInstance().getTime();
 		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
-//		System.out.println("\nOrdenados:");
-//		for (int i = 0; i < c.length; i++)
-//			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
+		System.out.println("\nOrdenados:");
+		for (int i = 0; i < c.length; i++)
+			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
 //		
 		
 	}
