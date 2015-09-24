@@ -3,16 +3,18 @@ package metodos;
 public class Insercion {
 	public static < I extends Comparable <I>> void ordenarPorInsercionSinCentinela(I [] vec)  {
 		I aux;
-		int posAux=0;
-		int i=0;
-		while(i<vec.length)
+		int j;
+		int i;
+		for (i = 1; i < vec.length; i++)
 		{
-			aux = vec[i+1];
-			for(int j=i;j>0;j--)
-				vec[j+1]=vec[j];
-			vec[0] = aux;
-			i++;
-		}
-			
+			aux = vec[i];
+			j = i - 1;
+			while ( (vec[j].compareTo(aux)==1) && (j >= 0) )
+			{
+				vec[j + 1] = vec[j];
+				j--;
+			}
+				vec[j + 1] = aux;
+		}	
 	}
 }
