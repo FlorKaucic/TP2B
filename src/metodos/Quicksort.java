@@ -1,33 +1,34 @@
 package metodos;
 
 public class Quicksort {
-	public static < O extends Comparable<O> > void ordenarPorQuicksort(O vec[], int primero, int ultimo){ //aca me copie de dieguito
-		int pivot = (ultimo + primero + 1)/2, //aca elijo el elemento del medio como pivot
-			i=primero, j=ultimo;
-		O aux;
+	public static < O extends Comparable<O> > void ordenarPorQuicksort(O vec[], int izq, int der){ //aca me copie de dieguito
+		
+		O pivote = vec[izq], // tomamos primer elemento como pivote
+				aux;
+		int i = izq; // i realiza la búsqueda de izquierda a derecha
+		int j = der; // j realiza la búsqueda de derecha a izquierda
+		
 
-		aux=vec[j];
-		vec[j]=vec[pivot];
-		vec[pivot]=aux;//cambio el elemento pivot por el ultimo
-		j--;
-
-		while(i>j)
-		{
-			while(vec[i].compareTo(vec[ultimo])<0)//busco un elemento mas grande que el pivot del lado izquierdo
-				i++;
-			while(vec[j].compareTo(vec[ultimo])>0)//busco un elemento mas chico que el pivot del lado derecho
-				j--;
-
-			if(i>=j)//verifico que no se hayan cruzado los indices
-			{
-				aux=vec[j];
-				vec[j]=vec[i];
-				vec[i]=aux;
+		while (i < j) { // mientras no se crucen las búsquedas
+			while (vec[i].compareTo(pivote) < 0 && i < j)
+				i++; // busca elemento mayor que pivote
+			while (vec[j].compareTo(pivote) >= 0)
+				j--; // busca elemento menor que pivote
+			if (i < j) { // si no se han cruzado
+				aux = vec[i]; // los intercambia
+				vec[i] = vec[j];
+				vec[j] = aux;
 			}
 		}
+		vec[izq] = vec[j]; // se coloca el pivote en su lugar de forma que tendremos
+		vec[j] = pivote; // los menores a su izquierda y los mayores a su derecha
+		if (izq < j - 1)
+			ordenarPorQuicksort(vec, izq, j - 1); // ordenamos subarray izquierdo
+		if (j + 1 < der)
+			ordenarPorQuicksort(vec, j + 1, der); // ordenamos subarray derecho
 
-		ordenarPorQuicksort(vec,primero,i-1);
-		ordenarPorQuicksort(vec,i+1,ultimo);
-		//recurso (programacion avanzada)
+
+
+		
 	}
 }
