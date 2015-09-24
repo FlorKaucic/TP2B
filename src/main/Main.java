@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Random;
 
 import auxiliar.Complejo;
-import metodos.Fusion;
+import metodos.*;
 
 public class Main {
 
@@ -17,7 +17,7 @@ public class Main {
 		// y comentar todos los sorts que no sean el que testean
 		
 		// CAMBIAR ESTE VALOR
-		int cant = 5;
+		int cant = 1000;
 		
 		Date tIni, tFin;
 				
@@ -27,52 +27,52 @@ public class Main {
 		// Y comentar/descomentar los prints
 		
 		
-		// Nuevo caso
-		
-		System.out.println("\n\n\nComplejos ordenados:");
-		for (int i = 0; i < cant; i++){
-			c[i]=new Complejo(i, i);
-//			System.out.println(c[i] + " Modulo:"+c[i].modulo());
-		}
-		
-		tIni = Calendar.getInstance().getTime();
-		Fusion.ordenarPorFusion(c);
-//		Shell.ordenarPorShell(c);
-//		Quicksort.ordenarPorQuickSort(c);
-//		Insercion.ordenarPorInsercionConCentinela(c);
-//		Insercion.ordenarPorInsercionSinCentinela(c);
-//		Seleccion.ordenarPorSeleccion(c);
-//		Burbujeo.ordenarPorBurbujeo(c);		
-		tFin = Calendar.getInstance().getTime();
-		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
-//		System.out.println("\nOrdenados:");
-//		for (int i = 0; i < c.length; i++)
-//			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
+//		// Nuevo caso
 //		
-		
-		// Nuevo caso
-		
-		
-		System.out.println("\n\n\nComplejos en orden inverso:");
-		for (int i = 0; i < cant; i++){
-			c[i]=new Complejo(cant-i, cant-i);
-//			System.out.println(c[i] + " Modulo:"+c[i].modulo());
-		}
-		tIni = Calendar.getInstance().getTime();
-		Fusion.ordenarPorFusion(c);
-//		Shell.ordenarPorShell(c);
-//		Quicksort.ordenarPorQuickSort(c);
-//		Insercion.ordenarPorInsercionConCentinela(c);
-//		Insercion.ordenarPorInsercionSinCentinela(c);
-//		Seleccion.ordenarPorSeleccion(c);
-//		Burbujeo.ordenarPorBurbujeo(c);
-		tFin = Calendar.getInstance().getTime();
-		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
-//		System.out.println("\nOrdenados:");
-//		for (int i = 0; i < c.length; i++)
-//			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
+//		System.out.println("\n\n\nComplejos ordenados:");
+//		for (int i = 0; i < cant; i++){
+//			c[i]=new Complejo(i, i);
+////			System.out.println(c[i] + " Modulo:"+c[i].modulo());
+//		}
 //		
-		
+//		tIni = Calendar.getInstance().getTime();
+//		Fusion.ordenarPorFusion(c);
+////		Shell.ordenarPorShell(c);
+////		Quicksort.ordenarPorQuickSort(c);
+////		Insercion.ordenarPorInsercionConCentinela(c);
+////		Insercion.ordenarPorInsercionSinCentinela(c);
+////		Seleccion.ordenarPorSeleccion(c);
+////		Burbujeo.ordenarPorBurbujeo(c);		
+//		tFin = Calendar.getInstance().getTime();
+//		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
+////		System.out.println("\nOrdenados:");
+////		for (int i = 0; i < c.length; i++)
+////			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
+////		
+//		
+//		// Nuevo caso
+//		
+//		
+//		System.out.println("\n\n\nComplejos en orden inverso:");
+//		for (int i = 0; i < cant; i++){
+//			c[i]=new Complejo(cant-i, cant-i);
+////			System.out.println(c[i] + " Modulo:"+c[i].modulo());
+//		}
+//		tIni = Calendar.getInstance().getTime();
+//		Fusion.ordenarPorFusion(c);
+////		Shell.ordenarPorShell(c);
+////		Quicksort.ordenarPorQuickSort(c);
+////		Insercion.ordenarPorInsercionConCentinela(c);
+////		Insercion.ordenarPorInsercionSinCentinela(c);
+////		Seleccion.ordenarPorSeleccion(c);
+////		Burbujeo.ordenarPorBurbujeo(c);
+//		tFin = Calendar.getInstance().getTime();
+//		System.out.println("\n\nTiempo de resolucion: " + (tFin.getTime() - tIni.getTime()));
+////		System.out.println("\nOrdenados:");
+////		for (int i = 0; i < c.length; i++)
+////			System.out.println(i + ": " + c[i] + " Modulo:"+c[i].modulo());	
+////		
+//		
 		// Nuevo caso
 		
 		
