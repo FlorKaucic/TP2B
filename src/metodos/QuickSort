@@ -1,0 +1,72 @@
+QuickSort no es sensible a la entrada y no es estable
+
+Worst case O(n^2)
+
+8 5 25 4 9 1 3 10 30
+
+Intercambia el pivot (generalmente elegido de manera random, ahora el del medio) con el ultimo elemento
+
+8 5 25 4 30 1 3 10 9
+
+i = 0
+j = n
+y va evaluando si el i > pivot, frena, lo mismo con j en sentido inverso, y se intercambian
+
+8 5 3 4 1 30 25 10 9
+
+hasta q i == j, y ahi se reemplaza i por el pivot (ultimo elemento) 
+recursiva hasta pivot y desde pivot en adelante
+
+8 5 3 4 1 9 25 10 30
+
+8 5 3 4 1 
+pivot es el 3
+
+
+Mejora de pivots
+Tomo el primero, el del medio y el ultimo
+
+9 6 3 5 0 8 1 11 2
+
+9       0        2
+
+Los ordeno
+
+0       2        9
+
+Intercambio el del medio con el anteultimo elemento
+
+0 6 3 5 11 8 1 2 9
+  1 3 5 11 8 6 
+
+Se cruzan los indices, entonces reemplazo i por el pivot
+
+0 1 2 5 11 8 6 3 9
+   
+Tomo los subarrays
+
+0 1
+
+5 11 8 6 3 9
+
+Tomo los pivots
+
+5   8      9
+
+Estan ordenados
+
+5 11 3 6 8 9
+   6 3 11
+   
+5 6 3 8 11 9
+
+0 1 2 3 5 6 8 9 11
+
+La ventaja es que al tener el primero mas chico y el ultimo mas grande no intervienen en el ordenamiento
+
+O(n log n)
+
+
+
+NOTA:
+Sacar recursividad tambien lo hace mas eficiente
