@@ -36,11 +36,11 @@ public class Main {
 		}
 		
 		tIni = Calendar.getInstance().getTime();
-		Fusion.ordenarPorFusion(c);
+//		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
 //		Insercion.ordenarPorInsercionConCentinela(c);
-//		Insercion.ordenarPorInsercionSinCentinela(c);
+		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);		
 		tFin = Calendar.getInstance().getTime();
@@ -59,11 +59,11 @@ public class Main {
 //			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
 		tIni = Calendar.getInstance().getTime();
-		Fusion.ordenarPorFusion(c);
+//		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
 //		Insercion.ordenarPorInsercionConCentinela(c);
-//		Insercion.ordenarPorInsercionSinCentinela(c);
+		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);
 		tFin = Calendar.getInstance().getTime();
@@ -84,11 +84,11 @@ public class Main {
 //			System.out.println(c[i] + " Modulo:"+c[i].modulo());
 		}
 		tIni = Calendar.getInstance().getTime();
-		Fusion.ordenarPorFusion(c);
+//		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
 //		Quicksort.ordenarPorQuickSort(c);
 //		Insercion.ordenarPorInsercionConCentinela(c);
-//		Insercion.ordenarPorInsercionSinCentinela(c);
+		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);
 		tFin = Calendar.getInstance().getTime();
