@@ -25,9 +25,9 @@ public class Complejo implements Comparable<Complejo> {
 		if (this.real < c.real)
 			return -1;
 
-		if (this.ima < c.ima)
-			return 1;
 		if (this.ima > c.ima)
+			return 1;
+		if (this.ima < c.ima)
 			return -1;
 
 		return 0;
