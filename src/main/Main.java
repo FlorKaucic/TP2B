@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Random;
 
 import auxiliar.Complejo;
-import metodos.Fusion;
+import metodos.*;
 
 public class Main {
 
