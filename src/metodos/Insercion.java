@@ -8,12 +8,13 @@ public class Insercion {
 		{
 			aux = vec[i];
 			j = i - 1;
-			while ( (vec[j].compareTo(aux)==1) && (j >= 0) )
+			while ( (j >= 0) && (vec[j].compareTo(aux)==1)) //cambie el orden de las condiciones, sino se sale del vector
 			{
 				vec[j + 1] = vec[j];
 				j--;
 			}
 				vec[j + 1] = aux;
+				
 		}	
 	}
 	public static <I extends Comparable <I>> void ordenarPorInsercionConCentinela(I[] vec) {
@@ -31,10 +32,10 @@ public class Insercion {
 		{
 			aux = vec[i];
 			j = i - 1;
-			while ( (vec[j].compareTo(aux)==1) && (j >= 0) )
+			while ( j>=0 && vec[j].compareTo(aux)==1 )
 			{
 				vec[j + 1] = vec[j];
-				j--;
+				j--; //si no hago esto, se sale del vector cuando j=0, al hacer la verificacion del while
 			}
 				vec[j + 1] = aux;
 		}	
