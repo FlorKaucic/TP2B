@@ -65,8 +65,8 @@ public class Main {
 		
 		tIni = Calendar.getInstance().getTime();
 //		Fusion.ordenarPorFusion(c);
-		Shell.ordenarPorShell(c);
-//		Quicksort.ordenarPorQuickSort(c);
+//		Shell.ordenarPorShell(c);
+		Quicksort.ordenarPorQuicksort(c, 0, cant-1);
 //		Insercion.ordenarPorInsercionConCentinela(c);
 //		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
