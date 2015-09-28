@@ -11,12 +11,7 @@ import auxiliar.Archivero;
 public class Main {
 
 	public static void main(String[] args) {
-		// BORRAR ESTO DESPUES:
-		// Para la doc coordinamos con Diego en usar CANT = 500, 1000, 2000, 3000, 4000, 5000
-		// Y hacer en el grafico una curva para cada caso de entrada (ordenada, aleatoria, en orden inverso)
-		// Para testear el tiempo solo tienen que ir cambiando el valor de CANT
-		// y comentar todos los sorts que no sean el que testean
-		
+				
 		// CAMBIAR ESTE VALOR
 		int cant = 500;
 		
@@ -27,12 +22,11 @@ public class Main {
 		Archivero arch = new Archivero();
 		
 
-		// Pueden ir comentando de a partes para evaluar un solo caso
-		// Y comentar/descomentar los prints
+	
 		
-		//c = arch.leerArchivo("Lotes//Inversa"+cant+".in");
+		c = arch.leerArchivo("Lotes//Inversa"+cant+".in");
 		//c = arch.leerArchivo("Lotes//Ordenada"+cant+".in");
-		c = arch.leerArchivo("Lotes//Random"+cant+".in");
+		//c = arch.leerArchivo("Lotes//Random"+cant+".in");
 		
 		
 	// Nuevo caso

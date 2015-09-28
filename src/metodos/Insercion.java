@@ -21,7 +21,7 @@ public class Insercion {
 		I aux;
 		int j=0, min=0;
 		
-		for (j = 0; j < vec.length - 1; j++)
+		for (j = 0; j < vec.length; j++)
 			if (vec[j].compareTo(vec[min]) < 0)
 				min=j;
 		
