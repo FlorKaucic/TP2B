@@ -10,9 +10,9 @@ public class Quicksort {
 		
 
 		while (i < j) { // mientras no se crucen las búsquedas
-			while (vec[i].compareTo(pivote) < 0 && i < j)
+			while (vec[i].compareTo(pivote) <= 0 && i < j)
 				i++; // busca elemento mayor que pivote
-			while (vec[j].compareTo(pivote) >= 0)
+			while (vec[j].compareTo(pivote) > 0)
 				j--; // busca elemento menor que pivote
 			if (i < j) { // si no se han cruzado
 				aux = vec[i]; // los intercambia

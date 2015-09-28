@@ -13,7 +13,15 @@ public class Complejo implements Comparable<Complejo> {
 	public Complejo() {
 		this(0, 0);
 	}
+	
+	public double getReal(){
+		return real;
+	}
 
+	public double getIma(){
+		return ima;
+	}
+	
 	public int compareTo(Complejo c) {
 		if (this.modulo() > c.modulo())
 			return 1;
@@ -41,7 +49,11 @@ public class Complejo implements Comparable<Complejo> {
 	public double modulo() {
 		return Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.ima, 2));
 	}
-
+	
+	public void clone(Complejo obj){
+		this.real = obj.real;
+		this.ima = obj.ima;
+	}
 	
 	
 }

@@ -3,18 +3,18 @@ package tests;
 import java.util.Random;
 
 import auxiliar.Complejo;
-import metodos.Quicksort;
+import metodos.Seleccion;
 import metodos.Shell;
 
-public class TestQuicksort {
+public class TestSeleccion {
 
 	public static void main(String[] args) {
-		int cant = 1000;
+		int cant =1000;
 		//Integer [] v = new Integer[6];
 		Complejo [] c = new Complejo[cant];
 		Random randomDouble = new Random();
-			/*	
-		for (int i = 0; i < cant; i++){
+				
+		/*for (int i = 0; i < cant; i++){
 			c[i]=new Complejo(randomDouble.nextDouble() * 20 - 10, randomDouble.nextDouble() * 20 - 10);
 			System.out.println(c[i]);
 		}*/
@@ -28,7 +28,7 @@ public class TestQuicksort {
 		}
 		long tIni = System.currentTimeMillis();
 		
-		Quicksort.ordenarPorQuicksort(c, 0, cant-1);
+		Seleccion.ordenarPorSeleccion(c);
 		
 		long tFin = System.currentTimeMillis();
 		
@@ -39,4 +39,3 @@ public class TestQuicksort {
 	}
 
 }
-
