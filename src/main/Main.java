@@ -18,7 +18,7 @@ public class Main {
 		// y comentar todos los sorts que no sean el que testean
 		
 		// CAMBIAR ESTE VALOR
-		int cant = 5000;
+		int cant = 500;
 		
 		Date tIni, tFin;
 				
@@ -30,9 +30,9 @@ public class Main {
 		// Pueden ir comentando de a partes para evaluar un solo caso
 		// Y comentar/descomentar los prints
 		
-		c = arch.leerArchivo("Lotes//Inversa"+cant+".in");
+		//c = arch.leerArchivo("Lotes//Inversa"+cant+".in");
 		//c = arch.leerArchivo("Lotes//Ordenada"+cant+".in");
-		//c = arch.leerArchivo("Lotes//Random"+cant+".in");
+		c = arch.leerArchivo("Lotes//Random"+cant+".in");
 		
 		
 	// Nuevo caso
@@ -66,8 +66,8 @@ public class Main {
 		tIni = Calendar.getInstance().getTime();
 //		Fusion.ordenarPorFusion(c);
 //		Shell.ordenarPorShell(c);
-		Quicksort.ordenarPorQuicksort(c, 0, cant-1);
-//		Insercion.ordenarPorInsercionConCentinela(c);
+//		Quicksort.ordenarPorQuicksort(c, 0, cant-1);
+		Insercion.ordenarPorInsercionConCentinela(c);
 //		Insercion.ordenarPorInsercionSinCentinela(c);
 //		Seleccion.ordenarPorSeleccion(c);
 //		Burbujeo.ordenarPorBurbujeo(c);
