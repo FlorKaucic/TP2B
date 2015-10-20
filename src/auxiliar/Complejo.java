@@ -55,5 +55,13 @@ public class Complejo implements Comparable<Complejo> {
 		this.ima = obj.ima;
 	}
 	
+	public static String getVector(Complejo [] vector){
+			StringBuffer cadena = new StringBuffer();
+			for (int i = 0; i < vector.length; i++) {
+				cadena.append(vector[i].getReal() + " " + vector[i].getIma()+"\n");
+			}
+			return cadena.toString();
+	}
+	
 	
 }

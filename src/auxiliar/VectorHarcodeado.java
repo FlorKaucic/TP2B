@@ -43,6 +43,8 @@ public class VectorHarcodeado {
 		}
 		return cadena.toString();
 	}
+	
+	
 
 	public String getVectorOrdenInverso() {
 		StringBuffer cadena = new StringBuffer();
@@ -61,4 +63,6 @@ public class VectorHarcodeado {
 		}
 		return cadena.toString();
 	}
+	
+
 }
